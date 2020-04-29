@@ -45,7 +45,7 @@ kubectl get pods
 You won't be able to see your web app running just yet, until you expose it:
 
 ``` bash
-kubectl expose deployments appy --port=80 --type=LoadBalancer
+kubectl expose deployments apppy --port=80 --type=LoadBalancer
 ```
 
 You can see the exposed service with
@@ -63,7 +63,7 @@ kubectl autoscale deployment/apppy --min=10 --max=15 --cpu-percent=80
 To keep a copy of what you've built
 
 ``` bash
-kubectl get deployments --field-selector metadata.name=nginx -o yaml > apppy-deployment.yaml
+kubectl get deployments --field-selector metadata.name=apppy -o yaml > apppy-deployment.yaml
 ```
 
 Next time you need to make one just like it:
